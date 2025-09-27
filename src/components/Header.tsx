@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Logo from "@/components/Logo";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,10 +24,14 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          {/* <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center shadow-sm">
               <span className="text-primary-foreground font-bold text-sm">L</span>
             </div>
+            <span className="text-xl font-semibold text-foreground">Lynq Labs</span>
+          </Link> */}
+          <Link to="/" className="flex items-center space-x-2">
+            <Logo size={32} />
             <span className="text-xl font-semibold text-foreground">Lynq Labs</span>
           </Link>
 
