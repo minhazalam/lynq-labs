@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const projects = [
@@ -54,7 +55,7 @@ const Projects = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Projects Header */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
@@ -84,7 +85,7 @@ const Projects = () => {
                     <CardDescription className="text-muted-foreground">
                       {project.description}
                     </CardDescription>
-                    
+
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, techIndex) => (
                         <Badge key={techIndex} variant="secondary" className="text-xs">
@@ -92,7 +93,7 @@ const Projects = () => {
                         </Badge>
                       ))}
                     </div>
-                    
+
                     <div className="flex gap-2 pt-4">
                       {project.githubPlaceholder ? (
                         <Button variant="outline" size="sm" disabled className="flex-1">
@@ -126,7 +127,8 @@ const Projects = () => {
             that drives real business value.
           </p>
           <Button size="lg" asChild>
-            <a href="/contact">Get In Touch</a>
+            {/* <a href="/contact">Get In Touch</a> */}
+            <Link to="/contact">Get In Touch</Link>
           </Button>
         </div>
       </section>
